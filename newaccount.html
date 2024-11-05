@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- 
+    Author: Haley Bush
+    File Name: newaccount.html
+    Date: 11/05/2024
+ -->
+<html lang="en">
+
+<head>
+    <title>DnDBeyond: Sign Up</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="images/dragon" href="images/dragon.png">
+</head>
+
+<body style="background-color: black; color: white;">
+    <nav style = "background-color: #24282e; text-align: right; color: white">
+		
+        <div id="image">
+            <img src="images/dragon.png" alt="DnD Dragon Logo" class="left" width="192" height="108" style="align-self: left;">
+        </div>
+
+        <search>
+            <form>
+              <input name="fsrch" id="fsrch" placeholder="Search Everything...">
+            </form>
+          </search>
+
+        |
+        <a href="https://www.dndbeyond.com/">DnD Home</a> |
+        <a href="mazegenerator.html">Maze Generator</a> |
+        <a href="newaccount.html">Sign Up</a> |
+        <a href="signin.html">Sign In</a> | 
+    </nav>
+    
+    <main>
+        <h1>Sign Up</h1>
+
+        <form action="/action_page.php" method="get">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+        </form>
+    </main>
+
+    <footer style="color: gray; text-align: left">
+        <p>Author: Haley Bush and Kaden Parkin</p>
+        <p>Maze Generator Made for SUU - CS 2450 Project. We have no affiliation with Wizards of the Coast or D&D Beyond</p>
+    </footer>
+
+</body>
+</html>
