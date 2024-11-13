@@ -51,39 +51,43 @@
                 </iframe>
             </div>
 
+            <form action="/submit">
+
             <div id="Difficulty">
                 <!--Radio Buttons-->
                 <h2>Maze Difficulty</h2>
-                <input type="radio" id="easy" name="mazedifficulty" value="easy">
+                <input type="radio" id="easy" name="mazedifficulty" value="1">
                 <label for="easy">Easy</label>
-                <input type="radio" id="medium" name="mazedifficulty" value="medium">
+                <input type="radio" id="medium" name="mazedifficulty" value="2">
                 <label for="medium">Medium</label>
-                <input type="radio" id="hard" name="mazedifficulty" value="hard">
+                <input type="radio" id="hard" name="mazedifficulty" value="3">
                 <label for="hard">Hard</label>
-                <input type="radio" id="veryhard" name="mazedifficulty" value="veryhard">
+                <input type="radio" id="veryhard" name="mazedifficulty" value="4">
                 <label for="veryhard">Very Hard</label>
             </div><br>
             
             <div class="Size">
                <!--Bubble Buttons-->
                 <h2>Size of Maze</h2>
-                <input type="radio" id="small" name="mazesize" value="small">
+                <input type="radio" id="small" name="mazesize" value="1">
                 <label for="small">Small</label>
-                <input type="radio" id="med" name="mazesize" value="med">
+                <input type="radio" id="med" name="mazesize" value="2">
                 <label for="med">Medium</label>
-                <input type="radio" id="large" name="mazesize" value="large">
+                <input type="radio" id="large" name="mazesize" value="3">
                 <label for="large">Large</label>
-                <input type="radio" id="huge" name="mazesize" value="huge">
+                <input type="radio" id="huge" name="mazesize" value="4">
                 <label for="huge">Huge</label>
             </div><br>
 
+
+
             <div class="UploadAssets">
-                <form action="/action_page.php">
                     <label for="Upload">Select files:</label>
                     <input type="file" id="Upload" name="Upload" multiple><br><br>
                     <input type="submit">
-                </form>
             </div><br>
+
+            </form>
 
             <div class="SaveAndDownload">
                 <!--Buttons-->
