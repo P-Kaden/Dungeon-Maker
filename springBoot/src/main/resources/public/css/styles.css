@@ -9,85 +9,94 @@ body, header, nav, main, footer, h1, div, img, ul {
     margin: 0;
     padding: 0;
     border: 0;
-    }
+}
 
-    /* Style rule for body and images */
-    body {
-    background-color: black;
-    }
-    img {
+/* Style rule for body and images */
+body {
+    background-image: url("/images/dragonscales-FreePik.jpg");/* This Image is from FreePik. Using this image means we can not sell this as a product*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black; /*Make the Background black when dragons scales don't load*/
+    text-align: center;
+}
+
+img {
     max-width: 100%;
     display: block;
-    }
+}
     
-    /* Style rule for header */
-    header {
+/* Style rule for header */
+header {
     font-family: Verdana, Arial, sans-serif;
     
     text-align: center;
     padding: 3%;
-    color: #092834;
+    color: #5d696d;
     margin-top: 5%;
-    }
-    /* Style rules for nav */
-    nav {
+}
+
+/* Style rules for nav */
+nav {
     padding: 1%;
     margin-bottom: 1%;
     background-color: #24282e;
-    position: -webkit-sticky;
-    position: sticky;
+    /*position: -webkit-sticky;
+    position: sticky;*//*This may be removed we may not what the nav to be sticky since Beyond isn't sticky*/
     top: 0px;
-    }
+}
 
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+nav img{
+    float: left; /*This may be removed*/
+}
 
-    nav li {
-        float: left;
-    }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-    nav li a {
+nav li {
+    float: left;
+}
+
+nav li a {
     display: inline;
     color: #c4c8ca;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    }
+}
     
-    /* Style rules for main content */
-    main {
+/* Style rules for main content */
+main {
     display: block;
     margin: 1% 1% 15%;
     padding: 1%;
     font-size: 1.5em;
-    }
-    
-    #image {
-    margin-bottom: 1%;
-    }
-    /* Style rule for footer */
-    footer {
+}
+
+div.MazePreview {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 180px;
+    display: inline-block;
+}
+      
+div.MazePreview:hover {
+    border: 1px solid #777;
+}
+      
+div.MazePreview img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style rule for footer */
+footer {
+    background-color: #092834;
     font-size: .70em;
     text-align: center;
     margin-top: 2em;
-    }
+}
 
-    div.MazePreview {
-        margin: 5px;
-        border: 1px solid #ccc;
-        float: left;
-        width: 180px;
-    }
-      
-      div.MazePreview:hover {
-        border: 1px solid #777;
-    }
-      
-      div.MazePreview img {
-        width: 100%;
-        height: auto;
-    }
