@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Test
 class MazeGeneratorTest {
 
     @Test
-    public void testInitialization() {
+    void testInitialization() {
         MazeGenerator mazeGenerator = new MazeGenerator(20, 20)
+        print mazeGenerator ;
     }
 
 }
