@@ -7,7 +7,6 @@ class MazeGeneratorTest {
     @Test
     void testInitialization() {
         MazeGenerator mazeGenerator = new MazeGenerator(20, 20)
-        print(mazeGenerator)
     }
 
 }
