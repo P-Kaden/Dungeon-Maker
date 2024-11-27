@@ -42,6 +42,7 @@ public class MazeGenerator {
                         generateMaze(neighbor.x, neighbor.y);
                     }
                 }
+                printMaze(cells);
             }
 
             private List<MazeCell> getUnvisitedNeighbors(MazeCell cell) {
@@ -61,25 +62,34 @@ public class MazeGenerator {
                 return neighbors;
             }
 
-            private void removeWall(MazeCell current, MazeCell neighbor) {
+            protected void removeWall(MazeCell current, MazeCell neighbor) {
                 if (current.x == neighbor.x) {
                     if (current.y < neighbor.y) {
-                        current.bottom = 0;
-                        neighbor.top = 0;
+                        current.bottom = false;
+                        neighbor.top = false;
                     } else {
-                        current.top = 0;
-                        neighbor.bottom = 0;
+                        current.top = false;
+                        neighbor.bottom = false;
                     }
                 } else {
                     if (current.x < neighbor.x) {
-                        current.right = 0;
-                        neighbor.left = 0;
+                        current.right = false;
+                        neighbor.left = false;
                     } else {
-                        current.left = 0;
-                        neighbor.right = 0;
+                        current.left = false;
+                        neighbor.right = false;
                     }
+                }
+
+            }
+
+            public void printMaze(MazeCell[][] cells) {
+                for (int y = 0; y < height; y++) {
+                    for (int x = 0; x < width; x++) {
+                        cells[y][x].printMe() ;
+                    }
+                    System.out.println();
                 }
             }
 
-            // ... (rest of the code)
 }
