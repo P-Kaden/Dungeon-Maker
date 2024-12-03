@@ -1,19 +1,29 @@
 package dev.dungeonmaker;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.Objects;
+
+@RestController
 public class DungeonMakerController {
     @PostMapping("/submit")
     public String handleFormSubmission(@RequestParam("mazesize") String mazeSize) {
-        return switch (mazeSize) {
-            case "small" -> "<html><body><h1>Hello from Spring Boot!</h1></body></html>";
-            case "med" -> "redirect:/you";
-            case "large" -> "redirect:/win";
-            case "huge" -> "redirect:/kys";
-            default -> "success";
-        };
+        MazeGenerator mazeGen = null;
+        if (Objects.equals(mazeSize, "small")) {
+            mazeGen = new MazeGenerator(10,10);
+        }else if (Objects.equals(mazeSize, "med")) {
+            mazeGen = new MazeGenerator(25, 25);
+        }else if (Objects.equals(mazeSize, "large")) {
+            mazeGen = new MazeGenerator(50, 50);
+        }else if (Objects.equals(mazeSize, "huge")) {
+            mazeGen = new MazeGenerator(100, 100);
+        }
+        MazeCell[][] cells = mazeGen.generateMaze();
+        return mazeGen.toString(cells);
+
     }
 }

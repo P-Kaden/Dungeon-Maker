@@ -167,6 +167,27 @@ public class MazeGenerator {
         }
     }
 
+    public String toString(MazeCell[][] cells) {
+        StringBuilder sb = new StringBuilder();
+        for (int y = 0; y < height; y++) {
+            for (int i = 0; i < 3; i++) {
+                for (int x = 0; x < width; x++) {
+                    if (i == 0) {
+                        sb.append(cells[y][x].printTopString());
+                    }
+                    if (i == 1) {
+                        sb.append(cells[y][x].printBodyString());
+                    }
+                    if (i == 2) {
+                        sb.append(cells[y][x].printBottomString());
+                    }
+                }
+                sb.append("\n");
+            }
+        }
+        return sb.toString();
+    }
+
     public void setMaze(MazeCell[][] cells) {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {

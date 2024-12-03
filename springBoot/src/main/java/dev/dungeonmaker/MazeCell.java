@@ -32,6 +32,15 @@ public class MazeCell {
             System.out.print("⬛⬜⬛");
         }
     }
+
+    public String printTopString() {
+        if (top) {
+            return("⬛⬛⬛");
+        } else {
+            return("⬛⬜⬛");
+        }
+    }
+
     public void printBody() {
         if (left && right) {
             System.out.print("⬛⬜⬛");
@@ -43,11 +52,32 @@ public class MazeCell {
             System.out.print("⬜⬜⬜");
         }
     }
+
+    public String printBodyString() {
+        if (left && right) {
+            return("⬛⬜⬛");
+        } else if (left) {
+            return("⬛⬜⬜");
+        } else if (right) {
+            return("⬜⬜⬛");
+        } else {
+            return("⬜⬜⬜");
+        }
+    }
+
     public void printBottom() {
         if (bottom) {
             System.out.print("⬛⬛⬛");
         } else {
             System.out.print("⬛⬜⬛");
+        }
+    }
+
+    public String printBottomString() {
+        if (bottom) {
+            return("⬛⬛⬛");
+        } else {
+            return("⬛⬜⬛");
         }
     }
 }
