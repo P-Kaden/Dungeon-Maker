@@ -52,7 +52,19 @@
                     <!--This where the maze will go. Iframe is a placeholder till then-->
                 </div>
                 <form action = "/submit" method = "post">
-
+                    <div id="Difficulty">
+                        <!--Radio Buttons-->
+                        <h2>Maze Difficulty</h2>
+                        <input type="radio" id="easy" name="mazedifficulty" value="easy">
+                          <label for="easy">Easy</label>
+                        <input type="radio" id="medium" name="mazedifficulty" value="medium">
+                        <label for="medium">Medium</label>
+                        <input type="radio" id="hard" name="mazedifficulty" value="hard">
+                        <label for="hard">Hard</label>
+                        <input type="radio" id="veryhard" name="mazedifficulty" value="veryhard">
+                        <label for="veryhard">Very Hard</label>
+                    </div>
+                    <br>
                     <div class="Size">
                         <!--Bubble Buttons-->
                         <h2>Size of Maze</h2>
