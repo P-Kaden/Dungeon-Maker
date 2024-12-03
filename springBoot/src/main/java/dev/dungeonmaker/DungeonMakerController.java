@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class DungeonMakerController {
     @PostMapping("/submit")
-    public String handleFormSubmission(@RequestParam("mazedifficulty") Integer mazeDifficulty,
-                                       @RequestParam("mazesize") Integer mazeSize
-                                       ) {
-        return "success"; // Assuming you have a success page named "success.html"
+    public String handleFormSubmission(@RequestParam("mazesize") String mazeSize) {
+        return switch (mazeSize) {
+            case "small" -> "<html><body><h1>Hello from Spring Boot!</h1></body></html>";
+            case "med" -> "redirect:/you";
+            case "large" -> "redirect:/win";
+            case "huge" -> "redirect:/kys";
+            default -> "success";
+        };
     }
 }

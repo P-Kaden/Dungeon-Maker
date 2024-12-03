@@ -53,32 +53,36 @@
                     <iframe src="https://www.mazegenerator.net/" title="Someone Elses Maze Generator">
                     </iframe>
                 </div>
+                <form>
+                    <div id="Difficulty">
+                        <!--Radio Buttons-->
+                        <h2>Maze Difficulty</h2>
+                        <input type="radio" id="easy" name="mazedifficulty" value="easy">
+                          <label for="easy">Easy</label>
+                        <input type="radio" id="medium" name="mazedifficulty" value="medium">
+                        <label for="medium">Medium</label>
+                        <input type="radio" id="hard" name="mazedifficulty" value="hard">
+                        <label for="hard">Hard</label>
+                        <input type="radio" id="veryhard" name="mazedifficulty" value="veryhard">
+                        <label for="veryhard">Very Hard</label>
+                    </div>
+                    <br>
 
-                <div id="Difficulty">
-                    <!--Radio Buttons-->
-                    <h2>Maze Difficulty</h2>
-                    <input type="radio" id="easy" name="mazedifficulty" value="easy">
-                    <label for="easy">Easy</label>
-                    <input type="radio" id="medium" name="mazedifficulty" value="medium">
-                    <label for="medium">Medium</label>
-                    <input type="radio" id="hard" name="mazedifficulty" value="hard">
-                    <label for="hard">Hard</label>
-                    <input type="radio" id="veryhard" name="mazedifficulty" value="veryhard">
-                    <label for="veryhard">Very Hard</label>
-                </div><br>
-                
-                <div class="Size">
-                <!--Bubble Buttons-->
-                    <h2>Size of Maze</h2>
-                    <input type="radio" id="small" name="mazesize" value="small">
-                    <label for="small">Small</label>
-                    <input type="radio" id="med" name="mazesize" value="med">
-                    <label for="med">Medium</label>
-                    <input type="radio" id="large" name="mazesize" value="large">
-                    <label for="large">Large</label>
-                    <input type="radio" id="huge" name="mazesize" value="huge">
-                    <label for="huge">Huge</label>
-                </div><br>
+                    <div class="Size">
+                        <!--Bubble Buttons-->
+                        <h2>Size of Maze</h2>
+                        <input type="radio" id="small" name="mazesize" value="small">
+                          <label for="small">Small</label>
+                        <input type="radio" id="med" name="mazesize" value="med">
+                        <label for="med">Medium</label>
+                        <input type="radio" id="large" name="mazesize" value="large">
+                        <label for="large">Large</label>
+                        <input type="radio" id="huge" name="mazesize" value="huge">
+                        <label for="huge">Huge</label>
+                    </div>
+                    <br>
+                    <input type="submit">
+                </form>
 
                 <div class="UploadAssets">
                     <form action="/action_page.php">

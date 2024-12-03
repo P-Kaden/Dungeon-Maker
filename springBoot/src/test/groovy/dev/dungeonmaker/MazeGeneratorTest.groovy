@@ -13,28 +13,35 @@ class MazeGeneratorTest {
     }
 
     @Test
-    void testOtherMazes() {
+    void testEasyMaze() {
         MazeGenerator mazeEasy = new MazeGenerator(10, 10)
         MazeCell[][] smallMaze = mazeEasy.generateMaze()
         assert (smallMaze.length == 10)
         assert (smallMaze[0].length == 10)
-        assert(mazeEasy.generateMaze().length == 10)
-        mazeEasy.printMaze(smallMaze)
     }
 
     @Test
     void testMediumMaze() {
         MazeGenerator mazeMedium = new MazeGenerator(25, 25)
+        MazeCell[][] medMaze = mazeMedium.generateMaze()
+        assert (medMaze.length == 25)
+        assert (medMaze[0].length == 25)
     }
 
     @Test
     void testLargeMaze() {
         MazeGenerator mazeLarge = new MazeGenerator(50, 50)
+        MazeCell[][] largeMaze = mazeLarge.generateMaze()
+        assert (largeMaze.length == 50)
+        assert (largeMaze[0].length == 50)
     }
 
     @Test
-    void testXtrLargeMaze() {
-        MazeGenerator mazeXtrLarge = new MazeGenerator(100, 100)
+    void testHugeMaze() {
+        MazeGenerator mazeHuge = new MazeGenerator(100, 100)
+        MazeCell[][] hugeMaze = mazeHuge.generateMaze()
+        assert (hugeMaze.length == 100)
+        assert (hugeMaze[0].length == 100)
     }
 
 }
